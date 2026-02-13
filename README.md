@@ -1,8 +1,11 @@
 # 🕵️‍♂️ AI Image Detector
 
-![AI Image Detector Hero](https://i.imgur.com/your-hero-image-placeholder.png)
+![AI Image Detector Hero](public/hero-screenshot.png)
 
 > **Advanced Hybrid Intelligence** for detecting AI-generated images. Combines commercial-grade APIs, cutting-edge open-source models, and privacy-first local analysis.
+
+## 🔗 Live Demo
+**[https://aiimagedetector-ten.vercel.app](https://aiimagedetector-ten.vercel.app)**
 
 ## 🚀 Features
 
