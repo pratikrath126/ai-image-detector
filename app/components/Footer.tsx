@@ -10,7 +10,7 @@ export default function Footer() {
                 <a href="#features">Features</a>
                 <a href="#how-it-works">How It Works</a>
                 <a
-                    href="https://github.com"
+                    href="https://github.com/pratikrath126/ai-image-detector"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
