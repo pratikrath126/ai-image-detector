@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🕵️‍♂️ AI Image Detector
 
-## Getting Started
+![AI Image Detector Hero](https://i.imgur.com/your-hero-image-placeholder.png)
 
-First, run the development server:
+> **Advanced Hybrid Intelligence** for detecting AI-generated images. Combines commercial-grade APIs, cutting-edge open-source models, and privacy-first local analysis.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Features
+
+-   **Multi-Engine Ensemble**: Uses 3 independent detection engines for maximum reliability.
+    -   **Sightengine GenAI**: Commercial-grade detection for DALL-E, Midjourney, Stable Diffusion.
+    -   **Ateeqq Space (ViT)**: High-accuracy Vision Transformer hosted on Hugging Face Spaces.
+    -   **Local Metadata Engine**: specialized heuristic analysis of EXIF data, AI tool markers, and entropy.
+-   **Weighted Voting System**: Smart aggregation logic that reduces false positives by cross-validating results.
+-   **Cyberpunk UI**: A stunning, responsive interface with neon aesthetics, glassmorphism, and smooth animations.
+-   **Privacy-First**: Images are processed in real-time and never stored.
+-   **Drag & Drop**: Intuitive upload zone with file validation and preview.
+
+## 🛠️ Tech Stack
+
+-   **Framework**: [Next.js 14 (App Router)](https://nextjs.org/)
+-   **Language**: [TypeScript](https://www.typescriptlang.org/)
+-   **Styling**: Vanilla CSS (Variables, Flexbox/Grid, Animations) - *No Tailwind dependency*
+-   **AI Integration**:
+    -   `@gradio/client` for Hugging Face Spaces
+    -   `FormData` for Sightengine API
+-   **Deployment**: [Vercel](https://vercel.com/)
+
+## 📦 Installation
+
+1.  **Clone the repository**:
+    ```bash
+    git clone https://github.com/your-username/ai-image-detector.git
+    cd ai-image-detector
+    ```
+
+2.  **Install dependencies**:
+    ```bash
+    npm install
+    ```
+
+3.  **Set up Environment Variables**:
+    Create a `.env.local` file in the root directory and add your keys:
+    ```env
+    # Sightengine API (Get free keys at sightengine.com)
+    SIGHTENGINE_API_USER=your_user_id
+    SIGHTENGINE_API_SECRET=your_api_secret
+
+    # Hugging Face Token (Optional, for higher rate limits)
+    HF_API_TOKEN=hf_your_token_here
+    ```
+
+4.  **Run Development Server**:
+    ```bash
+    npm run dev
+    ```
+    Open [http://localhost:3000](http://localhost:3000) to view the app.
+
+## 🚀 Deployment
+
+The easiest way to deploy is via **Vercel**.
+
+1.  Push your code to GitHub.
+2.  Import the project in Vercel.
+3.  Add the Environment Variables (`SIGHTENGINE_API_USER`, `SIGHTENGINE_API_SECRET`, `HF_API_TOKEN`) in the Vercel project settings.
+4.  Deploy!
+
+## 🧩 Architecture
+
+```mermaid
+graph TD
+    A[Image Upload] --> B[Next.js API Route /api/detect]
+    B --> C1[Sightengine GenAI]
+    B --> C2[Ateeqq Space (ViT/CNN)]
+    B --> C3[Local Metadata Analysis]
+    C1 & C2 & C3 --> D[Ensemble Engine]
+    D --> E[Weighted Voting Logic]
+    E --> F[finalVerdict + Confidence Score]
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📄 License
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT License. Free to use and modify.
