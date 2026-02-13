@@ -73,7 +73,7 @@ The easiest way to deploy is via **Vercel**.
 graph TD
     A[Image Upload] --> B[Next.js API Route /api/detect]
     B --> C1[Sightengine GenAI]
-    B --> C2[Ateeqq Space (ViT/CNN)]
+    B --> C2["Ateeqq Space (ViT/CNN)"]
     B --> C3[Local Metadata Analysis]
     C1 & C2 & C3 --> D[Ensemble Engine]
     D --> E[Weighted Voting Logic]
